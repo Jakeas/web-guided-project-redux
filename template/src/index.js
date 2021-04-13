@@ -32,14 +32,14 @@ const App = (props) => {
 // first arg - function that takes state as an arg,
 // returns an obj - each property of the returned obj
 // is added to props of the connected component
-connect((state) => {
+const ConnectedApp = connect((state) => {
   return { number: 42 };
 }, {})(App);
 
 // Step 1a - connect the store to our app
 render(
   <Provider store={store}>
-    <App />
+    <ConnectedApp />
   </Provider>,
   document.querySelector("#root")
 );
