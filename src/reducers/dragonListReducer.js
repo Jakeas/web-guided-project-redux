@@ -1,4 +1,4 @@
-import { ADD_MEMBER } from "../actions/dragonListActions";
+import { ADD_MEMBER, TOGGLE_MEMBER } from "../actions/dragonListActions";
 
 const initialState = {
   isWorking: true,
@@ -19,6 +19,19 @@ export const dragonListReducer = (state = initialState, action) => {
       return {
         ...state,
         members: [...state.members, newMember],
+      };
+
+    case TOGGLE_MEMBER:
+      return {
+        ...state,
+        members: state.members.map((member, index) => {
+          if (index === action.payload) {
+            return {
+              ...member,
+              dragonStatus: !member.dragonStatus,
+            };
+          }
+        }),
       };
     default:
       return state;
