@@ -30,6 +30,8 @@ export const dragonListReducer = (state = initialState, action) => {
               ...member,
               dragonStatus: !member.dragonStatus,
             };
+          } else {
+            return member;
           }
         }),
       };
