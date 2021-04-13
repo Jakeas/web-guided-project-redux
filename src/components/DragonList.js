@@ -34,7 +34,17 @@ class DragonList extends React.Component {
   }
 }
 
+// TODO:
+//  create a "mapStateToProps" function
+//  with mSTP, pass the members array to the props of DragonList through connect
+
+const mapStateToProps = (state) => {
+  return {
+    members: state.members,
+  };
+};
+
 // export as the default whatever connect returns
-export default connect()(DragonList);
+export default connect(mapStateToProps, {})(DragonList);
 
 // const ConnectedApp = connect()();
