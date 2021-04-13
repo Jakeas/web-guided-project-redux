@@ -48,6 +48,6 @@ const mapStateToProps = (state) => {
 };
 
 // export as the default whatever connect returns
-export default connect(mapStateToProps, {})(DragonList);
+export default connect(mapStateToProps, { addMember })(DragonList);
 
 // const ConnectedApp = connect()();
