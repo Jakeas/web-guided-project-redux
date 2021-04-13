@@ -10,6 +10,8 @@ const initialState = {
 
 export const dragonListReducer = (state = initialState, action) => {
   switch (action.type) {
+    case ADD_MEMBER:
+    // what should we return?
     default:
       return state;
   }
