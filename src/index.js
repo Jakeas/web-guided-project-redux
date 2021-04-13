@@ -10,6 +10,7 @@ import "./styles.css";
 
 // STEP 1 - create a store
 const store = createStore(dragonListReducer);
+console.log(store.getState());
 
 // STEP 1a - Wrap the app in the Provider component and "provide"
 // the store to your application through props
