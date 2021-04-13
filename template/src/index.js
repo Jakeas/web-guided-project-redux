@@ -13,6 +13,7 @@ const reducer = (state, action) => {
 
 // Step 1 - Create a Redux store
 const store = createStore(reducer);
+console.log(store.getState());
 
 const App = () => {
   return <h1>Hello World</h1>;
