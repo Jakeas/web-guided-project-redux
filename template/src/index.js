@@ -4,6 +4,10 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import "./styles.scss";
 
+const initialState = {
+  title: "Hello world. Is it working?",
+};
+
 const reducer = (state, action) => {
   switch (action.type) {
     default:
@@ -12,7 +16,7 @@ const reducer = (state, action) => {
 };
 
 // Step 1 - Create a Redux store
-const store = createStore(reducer);
+const store = createStore(reducer, initialState);
 console.log(store.getState());
 
 const App = () => {
