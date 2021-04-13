@@ -24,7 +24,7 @@ const store = createStore(reducer);
 console.log(store.getState());
 
 const App = (props) => {
-  return <h1>{props.number}</h1>;
+  return <h1>{props.title}</h1>;
 };
 // Step 2 - Read data from the Redux Store
 // connect function
@@ -33,7 +33,7 @@ const App = (props) => {
 // returns an obj - each property of the returned obj
 // is added to props of the connected component
 const ConnectedApp = connect((state) => {
-  return { number: 42 };
+  return { number: 42, title: state.title };
 }, {})(App);
 
 // Step 1a - connect the store to our app
