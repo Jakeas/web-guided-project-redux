@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 // STEP 2 - Read data from the Redux store in this component
 class DragonList extends React.Component {
