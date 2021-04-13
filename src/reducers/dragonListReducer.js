@@ -22,6 +22,8 @@ export const dragonListReducer = (state = initialState, action) => {
       };
 
     case TOGGLE_MEMBER:
+      const memberToToggle = state.members.find();
+      memberToToggle.dragonStatus = !memberToToggle.dragonStatus;
       return {
         ...state,
         members: state.members.map((member, index) => {
