@@ -1,3 +1,5 @@
+import { ADD_MEMBER } from "../actions/dragonListActions";
+
 const initialState = {
   isWorking: true,
   members: [
