@@ -17,7 +17,7 @@ class DragonList extends React.Component {
       <div>
         <div className="friends-list">
           {this.props.members.map((member, index) => (
-            <h4 key={index}>
+            <h4 key={index} onClick={() => this.props.toggleMember(index)}>
               {member.name}
               {member.dragonStatus && <i className="fas fa-dragon" />}
             </h4>
