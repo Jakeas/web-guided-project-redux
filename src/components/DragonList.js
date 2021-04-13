@@ -1,5 +1,6 @@
 import React from "react";
 
+// STEP 2 - Read data from the Redux store in this component
 class DragonList extends React.Component {
   state = {
     newMember: "",
