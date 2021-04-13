@@ -15,6 +15,9 @@ const reducer = (state = initialState, action) => {
   }
 };
 
+// under the hood, inside "createStore"
+reducer(undefined, { type: "@r.e.d.u.x>1.2.54" });
+
 // Step 1 - Create a Redux store
 const store = createStore(reducer);
 console.log(store.getState());
