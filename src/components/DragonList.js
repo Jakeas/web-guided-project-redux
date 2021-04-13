@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addMember } from "../actions/dragonListActions";
+import { addMember, toggleMember } from "../actions/dragonListActions";
 
 // STEP 2 - Read data from the Redux store in this component
 class DragonList extends React.Component {
@@ -48,6 +48,8 @@ const mapStateToProps = (state) => {
 };
 
 // export as the default whatever connect returns
-export default connect(mapStateToProps, { addMember })(DragonList);
+export default connect(mapStateToProps, { addMember, toggleMember })(
+  DragonList
+);
 
 // const ConnectedApp = connect()();
