@@ -34,4 +34,7 @@ class DragonList extends React.Component {
   }
 }
 
-export default DragonList;
+// export as the default whatever connect returns
+export default connect()(DragonList);
+
+const ConnectedApp = connect()();
