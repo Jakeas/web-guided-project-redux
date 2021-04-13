@@ -19,4 +19,9 @@ const App = () => {
 };
 
 // Step 1a - connect the store to our app
-render(<App />, document.querySelector("#root"));
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.querySelector("#root")
+);
