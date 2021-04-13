@@ -32,9 +32,14 @@ const App = (props) => {
 // first arg - function that takes state as an arg,
 // returns an obj - each property of the returned obj
 // is added to props of the connected component
-const ConnectedApp = connect((state) => {
-  return { number: 42, title: state.title };
-}, {})(App);
+const mapStateToProps = (state) => {
+  return {
+    number: 42,
+    title: state.title,
+  };
+};
+
+const ConnectedApp = connect(mapStateToProps, {})(App);
 
 // Step 1a - connect the store to our app
 render(
