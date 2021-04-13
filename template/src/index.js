@@ -24,7 +24,7 @@ const store = createStore(reducer);
 console.log(store.getState());
 
 const App = (props) => {
-  return <h1>{}</h1>;
+  return <h1>{props.number}</h1>;
 };
 // Step 2 - Read data from the Redux Store
 // connect function
