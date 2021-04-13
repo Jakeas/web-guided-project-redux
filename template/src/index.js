@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import { createStore } from "redux";
-import { Provider } from "react-redux";
+import { Provider, connect } from "react-redux";
 import "./styles.scss";
 
 const initialState = {
@@ -24,8 +24,10 @@ const store = createStore(reducer);
 console.log(store.getState());
 
 const App = () => {
-  return <h1>Hello World</h1>;
+  return <h1>{}</h1>;
 };
+
+// Step 2 - Read data from the Redux Store
 
 // Step 1a - connect the store to our app
 render(
