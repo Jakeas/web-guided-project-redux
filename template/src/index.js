@@ -3,8 +3,15 @@ import { render } from "react-dom";
 import { createStore } from "redux";
 import "./styles.scss";
 
+const reducer = (state, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
 // Step 1 - Create a Redux store
-const store = createStore();
+const store = createStore(reducer);
 
 const App = () => {
   return <h1>Hello World</h1>;
