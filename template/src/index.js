@@ -8,7 +8,7 @@ const initialState = {
   title: "Hello world. Is it working?",
 };
 
-const reducer = (state, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     default:
       return state;
@@ -16,7 +16,7 @@ const reducer = (state, action) => {
 };
 
 // Step 1 - Create a Redux store
-const store = createStore(reducer, initialState);
+const store = createStore(reducer);
 console.log(store.getState());
 
 const App = () => {
