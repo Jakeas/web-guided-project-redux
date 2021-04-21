@@ -8,3 +8,7 @@ export function toggleEditing() {
 export const updateTitle = newTitle => {
     return { type: UPDATE_TITLE, payload: newTitle };
 };
+
+// the functions above are action creators
+// the objects they return (with the keys "type" and "payload") are actions
+// what does dispatch method do?
