@@ -50,15 +50,23 @@ const Title = () => {
 // show which values from the state tree should be provided to this component as props
 const mapStateToProps = (state) => {
   return {
-
+    title: state.title,
+    editing: state.editing
   }
 }
 
 // build dispatching functions that handle state updates as relevant to this component
-const mapDispatchToProps = () => {
+const mapDispatchToProps = (dispatch) => {
   return {
-
+    toggleEditing: dispatch(toggleEditing()),
+    updateTitle: (newTitle) => dispatch(updateTitle(newTitle))
   }
 }
+//what are the functions?
 
 export default connect(mapStateToProps, mapDispatchToProps)(Title);
+
+// connect(mapStateToProps, mapDispatchToProps)returns a HOC (aka a enhancer function)
+// we *invoke* that enhancer function on our component in order to "enhance" it with the ability to:
+// read state from the store
+// update the store, by dispatching actions to the reducer
